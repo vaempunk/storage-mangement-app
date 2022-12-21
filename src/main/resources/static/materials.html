@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Управление складами - Материалы</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Управление складами</h1>
+    </header>
+
+    <hr>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Домашняя страница</a></li>
+            <li>
+                Материалы
+                <ul>
+                    <li>Все</li>
+                    <li><a href="materials-big-amount.html">Задание 2</a></li>
+                    <li><a href="materials-big-price-big-amount.html">Задание 3</a></li>
+                </ul>
+            </li>
+            <li><a href="storages.html">Склады</a></li>
+            <li><a href="storages-materials.html">Материалы на складах</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+
+    <h2>Материалы</h2>
+
+    <main>
+        <section>
+            <table id="materials-table">
+                <tr>
+                    <th>MATERIAL ID</th>
+                    <th>NAME</th>
+                    <th>MEASURE UNIT</th>
+                    <th>UNIT PRICE</th>
+                    <th class="del"></th>
+                </tr>
+            </table>
+        </section>
+
+        <aside>
+            <h2>Create / Update</h2>
+
+            <ul>
+                <li>
+                    <label>ID (leave empty to create):</label>
+                    <input type="number" id="id">
+                </li>
+                <li>
+                    <label>Name:</label>
+                    <input type="text" id="name">
+                </li>
+                <li>
+                    <label>Measure Unit:</label>
+                    <input type="text" id="measure-unit">
+                </li>
+                <li>
+                    <label>Unit price:</label>
+                    <input type="number" id="unit-price">
+                </li>
+                <li>
+                    <button type="submit" id="submit-button">Save</button>
+                </li>
+            </ul>
+        </aside>
+
+    </main>
+
+    <script src="js/materials.js"></script>
+    <script src="js/materials-form.js"></script>
+
+</body>
+
+</html>

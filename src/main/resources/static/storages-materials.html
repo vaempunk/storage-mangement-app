@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Управление складами - Материалы на складах</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Управление складами</h1>
+    </header>
+
+    <hr>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Домашняя страница</a></li>
+            <li><a href="materials.html">Материалы</a></li>
+            <li><a href="storages.html">Склады</a></li>
+            <li>
+                Материалы на складах
+                <ul>
+                    <li>Все</li>
+                    <li><a href="storages-materials-small-amount.html">Задание 1</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <hr>
+
+    <h2>Материалы на складах</h2>
+    <main>
+        <section>
+            <table id="materials-storages-table">
+                <tr>
+                    <th>STORAGE ID</th>
+                    <th>MATERIAL ID</th>
+                    <th>MEASURE UNIT</th>
+                    <th>AMOUNT</th>
+                    <th class="bigdate">LAST OPERATION DATE</th>
+                    <th class="del"></th>
+                </tr>
+            </table>
+        </section>
+
+        <aside>
+            <h2>Create / Update</h2>
+
+            <ul>
+                <li>
+                    <label>Storage ID:</label>
+                    <input type="number" id="storage-id">
+                </li>
+                <li>
+                    <label>Material ID:</label>
+                    <input type="number" id="material-id">
+                </li>
+                <li>
+                    <label>Measure Unit:</label>
+                    <input type="text" id="measure-unit">
+                </li>
+                <li>
+                    <label>Amount:</label>
+                    <input type="number" id="amount">
+                </li>
+                <li>
+                    <label>Last Operation Date:</label>
+                    <input type="datetime-local" id="last-operation-date">
+                </li>
+                <li>
+                    <button type="submit" id="submit-button">Save</button>
+                </li>
+            </ul>
+        </aside>
+    </main>
+
+    <script src="js/storages-materials.js"></script>
+    <script src="js/storages-materials-form.js"></script>
+
+</body>
+
+</html>

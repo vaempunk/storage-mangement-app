@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Управление складами - Материалы</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Управление складами</h1>
+    </header>
+
+    <hr>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Домашняя страница</a></li>
+            <li>
+                Материалы
+                <ul>
+                    <li><a href="materials.html">Все</a></li>
+                    <li><a href="materials-big-amount.html">Задание 2</a></li>
+                    <li>Задание 3</li>
+                </ul>
+            </li>
+            <li><a href="storages.html">Склады</a></li>
+            <li><a href="storages-materials.html">Материалы на складах</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+
+    <h2>Материалы с ценой > 200 за единицу, хранимые в количестве > 100 на каждом складе</h2>
+
+    <main>
+        <section>
+            <table id="materials-table">
+                <tr>
+                    <th>MATERIAL ID</th>
+                    <th>NAME</th>
+                    <th>MEASURE UNIT</th>
+                    <th>UNIT PRICE</th>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+    <script src="js/materials-big-price-big-amount.js"></script>
+
+</body>
+
+</html>

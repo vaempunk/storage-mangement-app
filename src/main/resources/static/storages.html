@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Управление складами - Склады</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Управление складами</h1>
+    </header>
+
+    <hr>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Домашняя страница</a></li>
+            <li><a href="materials.html">Материалы</a></li>
+            <li>Склады</li>
+            <li><a href="storages-materials.html">Материалы на складах</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+
+    <h2>Склады</h2>
+    <main>
+        <section>
+            <table id="storages-table">
+                <tr>
+                    <th>ID</th>
+                    <th>OWNER SURNAME</th>
+                    <th class="del"></th>
+                </tr>
+            </table>
+        </section>
+
+        <aside>
+            <h2>Create / Update</h2>
+
+            <ul>
+                <li>
+                    <label>ID (leave empty to create)</label>
+                    <input type="number" id="id">
+                </li>
+                <li>
+                    <label>Owner surname:</label>
+                    <input type="text" id="owner-surname">
+                </li>
+                <li>
+                    <button type="submit" id="submit-button">Save</button>
+                </li>
+            </ul>
+        </aside>
+
+    </main>
+
+    <script src="js/storages.js"></script>
+    <script src="js/storages-form.js"></script>
+
+</body>
+
+</html>
