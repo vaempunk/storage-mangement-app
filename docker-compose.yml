@@ -1,0 +1,17 @@
+version: "3.7"
+
+services:
+  db:
+    image: mysql
+    volumes:
+      - storage-db-data:/var/lib/mysql/data
+    environment:
+      MYSQL_ROOT_PASSWORD: 123
+
+  app:
+    image: storagemanagement
+    ports:
+      - 8080:8080
+
+volumes:
+  storage-db-data:

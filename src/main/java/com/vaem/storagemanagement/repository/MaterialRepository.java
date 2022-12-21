@@ -12,18 +12,15 @@ import com.vaem.storagemanagement.entity.MaterialEntity;
 public interface MaterialRepository extends JpaRepository<MaterialEntity, Integer> {
 
     @Query(value = "SELECT *\n" +
-            "FROM material m\n" +
-            "WHERE m.unit_price > 200\n" +
-            "AND (SELECT COUNT(*) FROM storage) = (\n" +
-            "SELECT COUNT(*)\n" +
-            "FROM storage_material st_m\n" +
-            "WHERE st_m.material_id = m.id\n" +
-            ")\n" +
-            "AND 100 < ALL(\n" +
-            "SELECT st_m.amount\n" +
-            "FROM storage_material st_m\n" +
-            "WHERE st_m.material_id = m.id\n" +
-            ");", nativeQuery = true)
+    "FROM material m\n" +
+    "WHERE m.unit_price > 200\n" +
+    "AND NOT EXISTS (\n" +
+        "SELECT *\n" +
+        "FROM storage st\n" +
+        "LEFT JOIN storage_material st_m\n" +
+        "ON st.id = st_m.storage_id\n" +
+        "WHERE st_m.material_id = m.id AND (st_m.amount IS NULL or st_m.amount <= 100)" +
+    ");", nativeQuery = true)
     public List<MaterialEntity> getWithBigPriceAndBigAmount();
 
 }
